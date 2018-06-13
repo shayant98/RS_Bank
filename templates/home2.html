@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+
+
+</head>
+<body>
+        <header>
+      {% include 'navigation2.html' %}
+
+    </header>
+        
+    <div class="container-fluid">
+           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-alles-tab" data-toggle="pill" href="#pills-alles" role="tab" aria-controls="pills-alles" aria-selected="true">Alles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-kassa1-tab" data-toggle="pill" href="#pills-kassa1" role="tab" aria-controls="pills-kassa1" aria-selected="false">Kassa 1</a>
+  </li>
+               <li class="nav-item">
+    <a class="nav-link" id="pills-kassa2-tab" data-toggle="pill" href="#pills-kassa2" role="tab" aria-controls="pills-kassa2" aria-selected="false">Kassa 2</a>
+  </li>
+                <li class="nav-item">
+    <a class="nav-link" id="pills-kassa3-tab" data-toggle="pill" href="#pills-kassa3" role="tab" aria-controls="pills-kassa3" aria-selected="false">Kassa 3</a>
+  </li>
+</ul>
+
+    <h2>Munten Overzicht</h2>
+        <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-alles" role="tabpanel" aria-labelledby="pills-alles-tab">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Datum</td>
+                    <td>Kassa</td>
+                    <td>1 Cent</td>
+                    <td>5 Cent</td>
+                    <td>10 Cent</td>
+                    <td>25 Cent</td>
+                    <td>100 Cent</td>
+                    <td>250 Cent</td>
+                    <td>Totaal</td>
+
+                </tr>
+            </thead>
+            <tbody>
+               {% for row in data %}
+                <tr>
+                {% for d in row %}
+                    <td>{{ d }}</td>
+                {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+         <div class="tab-pane fade active" id="pills-kassa1" role="tabpanel" aria-labelledby="pills-kassa1-tab">
+           <table class="table">
+            <thead>
+                <tr>
+                    <td>Datum</td>
+                    <td>Kassa</td>
+                    <td>1 Cent</td>
+                    <td>5 Cent</td>
+                    <td>10 Cent</td>
+                    <td>25 Cent</td>
+                    <td>100 Cent</td>
+                    <td>250 Cent</td>
+                    <td>Totaal</td>
+
+                </tr>
+            </thead>
+            <tbody>
+               {% for row in data2 %}
+                <tr>
+                {% for d in row %}
+                    <td>{{ d }}</td>
+                {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+         </div>
+         <div class="tab-pane fade active" id="pills-kassa2" role="tabpanel" aria-labelledby="pills-kassa2-tab">
+                   <table class="table">
+            <thead>
+                <tr>
+                    <td>Datum</td>
+                    <td>Kassa</td>
+                    <td>1 Cent</td>
+                    <td>5 Cent</td>
+                    <td>10 Cent</td>
+                    <td>25 Cent</td>
+                    <td>100 Cent</td>
+                    <td>250 Cent</td>
+                    <td>Totaal</td>
+
+                </tr>
+            </thead>
+            <tbody>
+               {% for row in data3 %}
+                <tr>
+                {% for d in row %}
+                    <td>{{ d }}</td>
+                {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+         </div>
+         <div class="tab-pane fade active" id="pills-kassa3" role="tabpanel" aria-labelledby="pills-kassa3-tab">
+                   <table class="table">
+            <thead>
+                <tr>
+                    <td>Datum</td>
+                    <td>Kassa</td>
+                    <td>1 Cent</td>
+                    <td>5 Cent</td>
+                    <td>10 Cent</td>
+                    <td>25 Cent</td>
+                    <td>100 Cent</td>
+                    <td>250 Cent</td>
+                    <td>Totaal</td>
+
+                </tr>
+            </thead>
+            <tbody>
+               {% for row in data4 %}
+                <tr>
+                {% for d in row %}
+                    <td>{{ d }}</td>
+                {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+         </div>
+
+</div>
+        </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $('table').DataTable();
+});
+</script>
+</body>
+</html>
+</body>
+</html>
